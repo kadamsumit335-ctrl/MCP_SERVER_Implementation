@@ -3,9 +3,11 @@ import torch
 from typing import Generator
 from threading import Thread
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStreamer
+from dotenv import load_dotenv
 
-# Global path and model placeholders
-MODEL_PATH = r"C:\Users\2830032\Downloads\gemma-3-1b-it\gemma-3-1b-it"
+load_dotenv()
+
+MODEL_PATH =  os.getenv("model_path")
 
 _model = None
 _tokenizer = None
