@@ -210,7 +210,7 @@ if query:
 
     # ----- Save to history ---------------
     st.session_state.messages.append({
-        "role" : "assitant",
+        "role" : "assistant",
         "content" : full_answer,
         "sources" : url_list,
     })
