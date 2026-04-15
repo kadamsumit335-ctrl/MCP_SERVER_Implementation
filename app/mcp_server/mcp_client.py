@@ -1,16 +1,16 @@
 import subprocess
 import json
 import sys
+import os
 
 class MCPClient:
-    def __init__(self):
+    def __init__(self):    
         self.process = subprocess.Popen(
             [sys.executable, "app/mcp_server/server.py"],
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
-            encoding="utf-8",
         )
         self._msg_id = 0
         # Send MCP initialize handshake

@@ -12,3 +12,6 @@ env/
 # IDE
 .vscode/
 .idea/
+
+# GitHub customizations (local-only)
+.github/instructions/

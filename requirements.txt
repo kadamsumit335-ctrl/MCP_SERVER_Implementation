@@ -1,4 +1,3 @@
-accelerate==1.5.1
 annotated-types==0.7.0
 anyio==4.13.0
 attrs==26.1.0
@@ -10,6 +9,9 @@ click==8.3.2
 colorama==0.4.6
 cryptography==46.0.6
 fastapi==0.135.3
+google-genai==0.8.0
+google-auth==2.28.1
+grpcio==1.62.0
 h11==0.16.0
 httpcore==1.0.9
 httpx==0.28.1
@@ -33,8 +35,6 @@ soupsieve==2.8.3
 sse-starlette==3.3.4
 starlette==1.0.0
 streamlit==1.44.0
-torch==2.6.0
-transformers==4.49.0
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 urllib3==2.6.3

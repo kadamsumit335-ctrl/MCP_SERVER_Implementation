@@ -7,7 +7,7 @@ from mcp.server.fastmcp import FastMCP
 # Add parent directory to path to allow imports from app.tools
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from app.tools.aws_search import search_aws_docs, fetch_page_text
+from tools.aws_search import search_aws_docs, fetch_page_text
 
 # Initialize FastMCP server
 server = FastMCP("aws-devdocs-server")
@@ -114,4 +114,7 @@ def get_aws_pricing(service: str) -> str:
     return f"Pricing information for {service}:\n{url}\n\nVisit the link for detailed cost dimensions."
 
 if __name__ == "__main__":
+    import logging
+    # Disable logging to prevent interference with stdio communication
+    logging.disable(logging.CRITICAL)
     server.run()
